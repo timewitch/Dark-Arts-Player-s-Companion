@@ -289,3 +289,62 @@ ClassSubList["circleoftwilight"] = {
 },
 ClassList.druid.subclasses[1].push("circleoftwilight");
 
+ClassSubList["bloodknight"] = {
+	regExpSearch : / bloodknight/i,
+	subname : "Blood Knight",
+	source : ["DAPC", 12],
+	abilitySave : 3, //constitution?
+	spellcastingList : {
+		//class : "unknown",
+		school : ["Hemo"], //Might need to make a seperate tag for Hemomancy spells.
+		level : [0, 4],
+		ritual : false, 
+	},
+	//need help making spellcasting table.
+	spellcastingKnown : {
+		cantrips : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+		spells : [0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 4, 4],
+	},
+	features : {
+		"subclassfeature3.1" : {
+			name : "Blood Well",
+			source : ["DAPC", 12],
+			minlevel : 3,
+			description : "\n   " + "I gain a number of blood dice to fuel my blood magic" + "\n   " + " I regain all of my expended blood dice when I finish a short or long rest.",
+			recovery : "short rest",
+			additional : ["", "", "d4", "d4", "d4", "d4", "d4", "d4", "d4", "d6", "d6", "d6", "d6", "d6", "d6", "d6", "d6", "d6", "d6", "d6"],
+			usages : [ 0, 0, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 5, 5, 5, 6, 6, 6],
+			//How do I translate the Using Blood Dice section into its reqired actions?
+		},
+		"subclassfeature7" : {
+			name : "Deathseeker",
+			source : ["DAPC", 12],
+			minlevel : 7, 
+			description : "\n   " + "I gain advantage on any Wisdom (Perception or Survival) check used to find a wounded creature." + "\n   " + "Additionally, as a bonus action on my turn I can sacrifice 1 hit point to learn the general direction of every creature within 100 feet of me that has blood.",
+			action : ["bonus action", ""],
+		},
+		"subclassfeature10" : {
+			name : "Improved Blood Well",
+			source : ["DAPC", 12],
+			minlevel : 10,
+			description : "\n   " + "My blood dice turn into d6s.",
+		}
+		"subclassfeature15" : { 
+			name : "Blood Rush",
+			source : ["DAPC", 12],
+			minlevel : 15,
+			description : "\n   " + "Whenever I cast a hemomancy spell of 1st level or higher, I enter a blood rush. The blood rush lasts until the end of my next turn." + "\n   " + "For the duration my speed is doubled, I have advantage on Dexterity saving throws, and I can disengage as a bonus ation.",
+			action : ["bonus action", ""],
+			//Do I need to list this as a bonus action ability?
+		},
+		"subclassfeature18" : {
+			name : "Strength of the Wounded",
+			source : ["DAPC", 12],
+			minlevel : 18,
+			description : "\n   " + "Whenever I expend a blood die while below half my hit point maximum, I can add my Constitution modifier to the result.",
+			//Do I need to use calcChanges for this?
+		},
+	},
+},
+ClassList.fighter.subclasses[1].push("bloodknight");
+
