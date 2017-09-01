@@ -348,3 +348,97 @@ ClassSubList["bloodknight"] = {
 },
 ClassList.fighter.subclasses[1].push("bloodknight");
 
+ClassSubList["wayofthebloodiedfist"] = {
+	regExpSearch : / wayofthebloodiedfist/i,
+	subname : "Way of the Bloodied Fist",
+	source : ["DAPC", 13],
+	features : {
+		"subclassfeature3" :{ //Is this how I add the spells to this Monastic Tradition? I based it on the Way of the Four Elements.
+			name : "Sanguine Arts",
+			source : ["DAPC", 13],
+			minlevel : 3,
+			description : "\n   " + "I can use my ki to duplicate the effects of certain spells." + "\n   " + "As an action, I can spend 2 ki points to cast bloodburn, blood seal, or vampire’s kiss at their lowest level without providing material components. Additionally, I gain the bloodletting cantrip if I don’t already know it." + "\n   " + "I must still pay the hemomancy costs associated with each spell.",
+			extraname : "Sanguine Arts",
+			extrachoices : ["Bloodburn", "Blood Seal", "Vampire's Kiss", "Bloodletting"]
+			eval : "ClassFeatureOptions([\"monk\", \"subclassfeature3\", \"sanguine arts\", \"extra\"]);",
+			removeeval : "ClassFeatureOptions([\"monk\", \"subclassfeature3\", \"sanguine arts\", \"extra\"], \"remove\");",
+			action : ["action", ""]
+		},
+		"bloodburn (prereq: level 3 monk)" : {
+			name : "Bloodburn",
+			source : ["DAPC", 24],
+			description : " [2 ki points]" + "\n   " + "As an action, I can cast Bloodburn without material components at its lowest level (DAPC 24).",
+			action : ["action", ""],
+			spellcastingBonus : {
+				name : "Bloodburn",
+				spells : ["bloodburn"],
+				selection : ["bloodburn"],
+				firstCol : 2
+				},
+					spellFirstColTitle : "Ki",
+					prereqeval : "classes.known.monk.level >= 3"
+				},
+		},
+		"blood seal (prereq: level 3 monk)" : {
+			name : "Blood Seal",
+			source : ["DAPC", 25],
+			description : " [2 ki points]" + "\n   " + "As an action, I can cast Blood Seal without material components at its lowest level (DAPC 25).",
+			action : ["action", ""],
+			spellcastingBonus : {
+				name : "Blood Seal",
+				spells : ["blood seal"],
+				selection : ["blood seal"],
+				firstCol : 2
+				},
+					spellFirstColTitle : "Ki",
+					prereqeval : "classes.known.monk.level >= 3"
+				},
+		},
+		"vampire’s kiss (prereq: level 3 monk)" : {
+			name : "Vampire's Kiss",
+			source : ["DAPC", 29],
+			description : " [2 ki points]" + "\n   " + "As an action, I can cast Vampire's Kiss without material components at its lowest level (DAPC 29).",
+			action : ["action", ""],
+			spellcastingBonus : {
+				name : "Vampire's Kiss",
+				spells : ["vampire’s kiss"],
+				selection : ["vampire’s kiss"],
+				firstCol : 2
+				},
+					spellFirstColTitle : "Ki",
+					prereqeval : "classes.known.monk.level >= 3"
+				},
+		},
+		"subclassfeature6" :{
+			name : "Toll of the Mystic",
+			source : ["DAPC", 13],
+			minlevel : 6,
+			description : "\n   " + "Whenever I spend my ki points, I can choose to expend a number of hit points equal to the number of ki points expended." + "\n   " + "If I do so, until the start of my next turn I gain a bonus to my speed equal to x10 the number of hit points expended.",
+			//eval : "ChangeSpeed(10);",
+			//removeeval : "ChangeSpeed(-10);"
+			//This increases the speed by +10, how to I change it to x10 depending on how much hp is spent?
+			action : ["action", ""],
+			//Would this be an action option?
+		},
+		"subclassfeature11" : {
+			name : "Transfusion",
+			source : ["DAPC", 13],
+			minlevel : 11,
+			description : "\n   " + "Whenever I hit a creature with one of the attacks granted by my Flurry of Blows while I'm below half my hit point maximum, I regain 1d4 hit points." + "\n   " + "If the attack scores a critical hit, I instead regain 2d4 hit points.",
+		},
+		"subclassfeature17" : {
+			name : "Dominion of Blood",
+			source : ["DAPC", 13],
+			minlevel : 17,
+			description : "\n   " + "When I hit a creature with an unarmed strike, I can spend 3 ki points to attempt to grasp control over that creature. The creature must succeed on a Constitution saving throw or fall under my control." + "\n   " + "On every subsequent turn after assuming control, I must use my action to take total and precise control of the target." + "\n   " + "Until the end of my next turn, the creature takes only the actions I choose, and doesn't do anything that I don't allow it to do. During this time, I can also cause the creature to use a reaction, but this requires me to use my own reaction as well." + "\n   " + "If I don't take this action at the start of my turn, the control ends prematurely. This control can last for up to 1 minute." + "\n   " + "Each time the target takes damage, it makes a new Constitution saving throw against the effect. If the saving throw succeeds, the effect ends.",
+			action : ["action", ""],
+			//Would this be an action option?
+			firstCol : 3
+				},
+					spellFirstColTitle : "Ki",
+					prereqeval : "classes.known.monk.level >= 17"
+				},
+		},
+	},
+},
+ClassList.monk.subclasses[1].push("wayofthebloodiedfist");
