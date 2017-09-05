@@ -20,6 +20,8 @@ RaceList["mummy"] = {
 	dmgres : ["poison"],
 	savetxt : "I am immune to disease and to being poisoned",
 	trait : "Mummy (+2 Strength, +1 Constitution)"\nUndead:\nI am considered undead for effects such as turn undead and many healing spells.\nI am immune to disease and being poisoned.\nI do not need to eat or breathe, but I can can ingest food or drink if I wish.\nInstead of sleeping, I enter an inactive state for 4 hours each day. I do not dream in this state, but resting in this way is otherwise identical to sleeping. Magically induced sleep can cause me to enter this inactive state. \nAs an action, I can target one creature I can see within 10 feet of me. The target must succeed on a Wisdom saving throw or become frightened of me until the end of my next turn. The DC for this saving throw equals 8 + my Constitution modifier + my Proficiency bonus. \nMy hands rot those they touch. When I make unarmed attacks against creatures with them, I deal necrotic damage equal to 1d4 + my Strength modifier, instead of the bludgeoning damage normal for an unarmed attack.", 
+},
+
 	features : {
 		"dreadful glare" : { 
 			name : "Dreadful Glare",
@@ -54,6 +56,8 @@ RaceList["wight"] = {
 	dmgres : ["poison"],
 	savetxt : "I am immune to disease and to being poisoned",
 	trait : "Wight (+2 Constitution, +1 Charisma)"\nUndead: I am considered undead for effects such as turn undead and many healing spells.\nI am immune to disease and being poisoned.\nI do not need to eat or breathe, but I can can ingest food or drink if I wish.\nInstead of sleeping, I enter an inactive state for 4 hours each day. I do not dream in this state, but resting in this way is otherwise identical to sleeping. Magically induced sleep can cause me to enter this inactive state. \nWhen I kill a humanoid, I can choose to have it rise 24 hours later as a zombie under my control, unless it is restored to life or its body is destroyed.n\Only one zombie may be created through this ability at any one time, if another is created then the first becomes inanimate.n\The zombie has the statistics of the Zombie (Monster Manual pg. 316), except its hp value is instead equal to three times my level.",
+},
+
 	features : {
 		"life drain" : {
 			name : "Life Drain",
@@ -78,6 +82,7 @@ RaceList["shadar-kai"] = {
 	languages : ["Common", "+1 from Shadar-kai"],
 	skills : ["Intimidation"],
 	trait : "Shadar-kai (+2 Dexterity, +1 Intelligence)\nDoomspeaker: I gain proficiency in the Intimidation skill. \nOn my turn, when I reduce a creature to 0 hit points, I can use my bonus action to teleport up to 15 feet.",
+},
 	features : {
 		"shadow jaunt" : {
 			name : "Shadow Jaunt",
@@ -98,26 +103,26 @@ ClassSubList["path of blood"] = {
 		subname : "Path of Blood",
 		source : ["DAPC", 8],
 		features : { 
-			"subclassfeature3" : {
+			"subclassfeature1" : {
 				name : "Bloodbound",
 				source : ["DAPC", 8],
 				minlevel : 3, 
-				description : "\n   " + "Starting when I select this path at 3rd level, I can choose to create a bond of blood between myself and an enemy within 30 feet of me when I rage." + "\n   " + "For the duration of my rage, that enemy’s attacks deal bonus necrotic damage to me equal to 1d4 + half my barbarian level on a hit, and my attacks against that enemy also deal 1d4 + half my barbarian level bonus necrotic damage on a hit. The bonus damage dealt to me ignores resistance and immunity." + "\n   " + "If the enemy dies before my rage ends, I can use my bonus action on a subsequent turn to create a new bond between myself and another enemy.",
+				description : "\n   " + "I can choose to create a bond of blood between myself and an enemy within 30 feet of me when I rage." + "\n   " + "For the duration of my rage, that enemy’s attacks deal bonus necrotic damage to me equal to 1d4 + half my barbarian level on a hit, and my attacks against that enemy also deal 1d4 + half my barbarian level bonus necrotic damage on a hit. The bonus damage dealt to me ignores resistance and immunity." + "\n   " + "If the enemy dies before my rage ends, I can use my bonus action on a subsequent turn to create a new bond between myself and another enemy.",
 			},
-			"subclassfeature6" : {
+			"subclassfeature2" : {
 				name : "Power Through Suffering",
 				source : ["DAPC", 8],
 				minlevel : 6, 
-				description : "\n   " + "At 6th level, the sight of my own blood empowers my rage. When I am below half my hit point maximum, my rage damage bonus is doubled for each attack I make against the target of my Bloodbound feature.",
+				description : "\n   " + "When I am below half my hit point maximum, my rage damage bonus is doubled for each attack I make against the target of my Bloodbound feature.",
 			},
-			"subclassfeature10" : {
+			"subclassfeature3" : {
 				name : "Blood Scent",
 				source : ["DAPC", 8],
 				minlevel : 10,
-				description : "\n   " + "Starting at 10th level, I can smell the scent of blood from up to 5 miles away, and accurately pinpoint the direction it’s coming from." + "\n   " + "Once I get within 1 mile of the source, I can make a DC 15 Wisdom (Perception) check to determine its exact identity." + "\n      " + "On a success, I know the exact identity of the creature if I have encountered it before; otherwise I only determine its type and the severity of its injury." + "\n      " + "On a failed check, I know that I failed the check and can’t make another one for 1 hour." + "\n      " + "Either way on a success, I know the exact distance and direction to the injured enemy.",
+				description : "\n   " + "I can smell the scent of blood from up to 5 miles away, and accurately pinpoint the direction it’s coming from." + "\n   " + "Once I get within 1 mile of the source, I can make a DC 15 Wisdom (Perception) check to determine its exact identity." + "\n      " + "On a success, I know the exact identity of the creature if I have encountered it before; otherwise I only determine its type and the severity of its injury." + "\n      " + "On a failed check, I know that I failed the check and can’t make another one for 1 hour." + "\n      " + "Either way on a success, I know the exact distance and direction to the injured enemy.",
 				//The extra spaces later on are to format the save as something similar to an outline. Would this be how to do it?
 			},
-			"subclassfeature14", : {
+			"subclassfeature4", : {
 				name : "Blood Reckoning",
 				source : ["DAPC", 8],
 				minlevel : 14, 
@@ -132,29 +137,29 @@ ClassSubList["college of the shadowfell"] = {
 		subname : "College of the Shadowfell",
 		source : ["DAPC", 9],
 		features : {
-			"subclassfeature3" : {
+			"subclassfeature1" : {
 				name : "Bonus Proficiencies",
 				source : ["DAPC", 9],
 				minlevel : 3,
-				description : "\n   " + "When I select this College at 3rd level, I gain proficiency with medium armor, martial weapons, and the Stealth skill.",
+				description : "\n   " + "I gain proficiency with medium armor, martial weapons, and the Stealth skill.",
 					armor : [false, true, false, false],
 					weapons : [false, true],
 					skills : ["Stealth"],
 					skillstxt : "\n\n" + toUni("College of the Shadowfell") + ": Stealth.",
 			},
-			"subclassfeature3.1" : {
+			"subclassfeature2" : {
 				name : "Shadow Stride",
 				source : ["DAPC", 9],
 				minlevel : 3,
 				description : "\n   " +  "When a creature that is in darkness or dim light and has a bardic inspiration die from me begins to move, it can choose to roll that die and add 5 times the number rolled to their speed until the end of their turn.",
 			},
-			"subclassfeature6" : {
+			"subclassfeature3" : {
 				name : "Shroud of Darkness",
 				source : ["DAPC", 9],
 				minlevel : 6,
-				description : "\n   " + "Whenever a creature uses a bardic inspiration die from me, that creature becomes imbued with shadow magic." + "\n   " + "Shadows envelop that creature until the start of my next turn, causing all attacks against it to have disadvantage and allowing it to disengage or hide as a bonus action for the duration.",
+				description : "\n   " + "Whenever a creature uses a bardic inspiration die from me, all attacks against it to have disadvantage and it is allowed to disengage or hide as a bonus action for the duration.",
 			},
-			"subclassfeature14: : {
+			"subclassfeature4" : {
 				name : "Umbral Body",
 				source : ["DAPC", 9],
 				minlevel : 14, 
@@ -183,12 +188,12 @@ ClassSubList["night domain"] = {
 				name : "Bonus Proficiencies",
 				source : ["DAPC", 10],
 				minlevel : 1, 
-				description :  "\n   " + "When I select this Domain at 1st level, I gain proficiency with martial weapons and the Stealth skill.",
+				description :  "\n   " + "I gain proficiency with martial weapons and the Stealth skill.",
 				weapons : [false, true],
 				skills : ["Stealth"],
 				skillstxt : "\n\n" + toUni("Night Domain") + ": Stealth.",
 			},
-			"subclassfeature1.1" : {
+			"subclassfeature2" : {
 				name : "Lunar Radiance",
 				source : ["DAPC", 10],
 				minlevel : 1, 
@@ -202,29 +207,29 @@ ClassSubList["night domain"] = {
 					atkAdd : ["if (isMeleeWeapon) {fields.Description += (fields.Description ? '; ' : '') + '+1d6 Radiant damage'; }; ", "With my melee weapon attacks I deal an extra 1d6 radiant damage."]
 				}
 			},
-			"subclassfeature2" : {
+			"subclassfeature3" : {
 				name : "Channel Divinity: Midnight Gloom",
 				source : ["DAPC", 10],
 				minlevel : 2,
-				description :  "\n   " + "As an action, in 30 ft all lights, magical or non-magical, are instantly put out. and hostiles must make a Con save" + "\n   " + "Each takes necrotic damage and loses any darkvision they have for 1 min, saves for half and do not lose darkvision" + "\n   " + "A creature can repeat this saving throw at the start of each of its turns, regaining their darkvision on a success.",
+				description :  "\n   " + "As an action, in 30 ft all lights, magical or non-magical, are instantly put out. and hostiles must make a Con save." + "\n   " + "Each takes necrotic damage and loses any darkvision they have for 1 min, saves for half and do not lose darkvision." + "\n   " + "A creature can repeat this saving throw at the start of each of its turns, regaining their darkvision on a success.",
 				additional : ["", "2d6 + 2 damage", "2d6 + 3 damage", "2d6 + 4 damage", "2d6 + 5 damage", "2d6 + 6 damage", "2d6 + 7 damage", "2d6 + 8 damage", "2d6 + 9 damage", "2d6 + 10 dmg", "2d6 + 11 dmg", "2d6 + 12 dmg", "2d6 + 13 dmg", "2d6 + 14 dmg", "2d6 + 15 dmg", "2d6 + 16 dmg", "2d6 + 17 dmg", "2d6 + 18 dmg", "2d6 + 19 dmg", "2d6 + 20 dmg"],
 				//How do I mark this as Necrotic damage? I copied from the Light Domain ability, but it didn't say anything. 
 				action : ["action", ""],
 			},
-			"subclassfeature6" : {
+			"subclassfeature4" : {
 				name : "Moonlight Strike",
 				source : ["DAPC", 10],
 				minlevel : 6,
 				description : "\n   " + "When I deal radiant damage to a creature, I may choose to have it emit dim light in a 10 foot radius until the end of my next turn." + "\n      " + "The affected creature can’t benefit from being invisible." + "\n      " + "If the creature is a shapeshifter it immediately shifts to its original form and can’t assume a different form until the light dissipates.",
 			},
-			"subclassfeature8" : {
+			"subclassfeature5" : {
 				name : "Divine Strike",
 				source : ["DAPC", 10],
 				minlevel : 8,
 				description : "\n   " + "Once on each of my turns when I hit a creature with a weapon attack, I can cause the attack to deal an extra 1d8 radiant damage to the target." + "\n   " + "When I reach 14th level, the extra damage increases to 2d8."
 				additional : ["", "", "", "", "", "", "", "1d8 damage", "", "", "", "", "", "2d8 damage", "", "", "", "", "", ""],
 			},
-			"subclassfeature17" : {
+			"subclassfeature6" : {
 				name : "Nightstalker",
 				source : ["DAPC", 10],
 				minlevel : 17,
@@ -236,7 +241,7 @@ ClassSubList["night domain"] = {
 	},
 ClassList.cleric.subclasses[1].push("nightdomain");
 
-ClassSubList["circleoftwilight"] = {
+ClassSubList["circle of twilight"] = {
 	regExpSearch : / circleoftwilight/i,
 	subname : "Circle of Twilight",
 	source : ["DAPC", 11],
@@ -275,7 +280,7 @@ ClassSubList["circleoftwilight"] = {
 				usagescalc : "event.value = Math.max(1, tDoc.getField(\"Wis Mod\").value);",
 			recovery : "long rest",
 		},
-		subclassfeature14" : {
+		"subclassfeature14" : {
 			name : "Ritualist",
 			source : ["DAPC", 11],
 			minlevel : 14,
@@ -285,24 +290,47 @@ ClassSubList["circleoftwilight"] = {
 },
 ClassList.druid.subclasses[1].push("circleoftwilight");
 
-ClassSubList["bloodknight"] = {
+ClassSubList["blood knight"] = {
 	regExpSearch : / bloodknight/i,
 	subname : "Blood Knight",
 	source : ["DAPC", 12],
 	abilitySave : 3, //constitution?
 	spellcastingList : {
-		//class : "unknown",
-		school : ["Hemo"], //Might need to make a seperate tag for Hemomancy spells.
+		class : "any",
+		//school : ["Hemo"], //Might need to make a seperate tag for Hemomancy spells.
 		level : [0, 4],
 		ritual : false, 
 	},
 	//need help making spellcasting table.
+	spellcastingTable : [
+		[0, 0, 0, 0, 0, 0, 0, 0, 0], //lvl 0
+		[0, 0, 0, 0, 0, 0, 0, 0, 0], //lvl 1
+		[0, 0, 0, 0, 0, 0, 0, 0, 0], //lvl 2
+		[1, 0, 0, 0, 0, 0, 0, 0, 0], //lvl 3
+		[1, 0, 0, 0, 0, 0, 0, 0, 0], //lvl 4
+		[1, 0, 0, 0, 0, 0, 0, 0, 0], //lvl 5
+		[1, 0, 0, 0, 0, 0, 0, 0, 0], //lvl 6
+		[0, 2, 0, 0, 0, 0, 0, 0, 0], //lvl 7
+		[0, 2, 0, 0, 0, 0, 0, 0, 0], //lvl 8
+		[0, 2, 0, 0, 0, 0, 0, 0, 0], //lvl 9
+		[0, 2, 0, 0, 0, 0, 0, 0, 0], //lvl10
+		[0, 2, 0, 0, 0, 0, 0, 0, 0], //lvl11
+		[0, 2, 0, 0, 0, 0, 0, 0, 0], //lvl12
+		[0, 0, 2, 0, 0, 0, 0, 0, 0], //lvl13
+		[0, 0, 2, 0, 0, 0, 0, 0, 0], //lvl14
+		[0, 0, 2, 0, 0, 0, 0, 0, 0], //lvl15
+		[0, 0, 2, 0, 0, 0, 0, 0, 0], //lvl16
+		[0, 0, 2, 0, 0, 0, 0, 0, 0], //lvl17
+		[0, 0, 2, 0, 0, 0, 0, 0, 0], //lvl18
+		[0, 0, 2, 0, 0, 0, 0, 0, 0], //lvl19
+		[0, 0, 2, 0, 0, 0, 0, 0, 0], //lvl20
+	],
 	spellcastingKnown : {
 		cantrips : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
 		spells : [0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 4, 4],
 	},
 	features : {
-		"subclassfeature3.1" : {
+		"subclassfeature1" : {
 			name : "Blood Well",
 			source : ["DAPC", 12],
 			minlevel : 3,
@@ -312,20 +340,20 @@ ClassSubList["bloodknight"] = {
 			usages : [ 0, 0, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 5, 5, 5, 6, 6, 6],
 			//How do I translate the Using Blood Dice section into its reqired actions?
 		},
-		"subclassfeature7" : {
+		"subclassfeature2" : {
 			name : "Deathseeker",
 			source : ["DAPC", 12],
 			minlevel : 7, 
 			description : "\n   " + "I gain advantage on any Wisdom (Perception or Survival) check used to find a wounded creature." + "\n   " + "Additionally, as a bonus action on my turn I can sacrifice 1 hit point to learn the general direction of every creature within 100 feet of me that has blood.",
 			action : ["bonus action", ""],
 		},
-		"subclassfeature10" : {
+		"subclassfeature3" : {
 			name : "Improved Blood Well",
 			source : ["DAPC", 12],
 			minlevel : 10,
 			description : "\n   " + "My blood dice turn into d6s.",
 		}
-		"subclassfeature15" : { 
+		"subclassfeature4" : { 
 			name : "Blood Rush",
 			source : ["DAPC", 12],
 			minlevel : 15,
@@ -333,7 +361,7 @@ ClassSubList["bloodknight"] = {
 			action : ["bonus action", ""],
 			//Do I need to list this as a bonus action ability?
 		},
-		"subclassfeature18" : {
+		"subclassfeature5" : {
 			name : "Strength of the Wounded",
 			source : ["DAPC", 12],
 			minlevel : 18,
@@ -344,7 +372,7 @@ ClassSubList["bloodknight"] = {
 },
 ClassList.fighter.subclasses[1].push("bloodknight");
 
-ClassSubList["wayofthebloodiedfist"] = {
+ClassSubList["way of the bloodied fist"] = {
 	regExpSearch : / wayofthebloodiedfist/i,
 	subname : "Way of the Bloodied Fist",
 	source : ["DAPC", 13],
