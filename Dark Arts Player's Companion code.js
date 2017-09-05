@@ -20,8 +20,7 @@ RaceList["mummy"] = {
 	dmgres : ["poison"],
 	savetxt : "I am immune to disease and to being poisoned",
 	trait : "Mummy (+2 Strength, +1 Constitution)"\nUndead:\nI am considered undead for effects such as turn undead and many healing spells.\nI am immune to disease and being poisoned.\nI do not need to eat or breathe, but I can can ingest food or drink if I wish.\nInstead of sleeping, I enter an inactive state for 4 hours each day. I do not dream in this state, but resting in this way is otherwise identical to sleeping. Magically induced sleep can cause me to enter this inactive state. \nAs an action, I can target one creature I can see within 10 feet of me. The target must succeed on a Wisdom saving throw or become frightened of me until the end of my next turn. The DC for this saving throw equals 8 + my Constitution modifier + my Proficiency bonus. \nMy hands rot those they touch. When I make unarmed attacks against creatures with them, I deal necrotic damage equal to 1d4 + my Strength modifier, instead of the bludgeoning damage normal for an unarmed attack.", 
-},
-
+	},
 	features : {
 		"dreadful glare" : { 
 			name : "Dreadful Glare",
@@ -56,8 +55,7 @@ RaceList["wight"] = {
 	dmgres : ["poison"],
 	savetxt : "I am immune to disease and to being poisoned",
 	trait : "Wight (+2 Constitution, +1 Charisma)"\nUndead: I am considered undead for effects such as turn undead and many healing spells.\nI am immune to disease and being poisoned.\nI do not need to eat or breathe, but I can can ingest food or drink if I wish.\nInstead of sleeping, I enter an inactive state for 4 hours each day. I do not dream in this state, but resting in this way is otherwise identical to sleeping. Magically induced sleep can cause me to enter this inactive state. \nWhen I kill a humanoid, I can choose to have it rise 24 hours later as a zombie under my control, unless it is restored to life or its body is destroyed.n\Only one zombie may be created through this ability at any one time, if another is created then the first becomes inanimate.n\The zombie has the statistics of the Zombie (Monster Manual pg. 316), except its hp value is instead equal to three times my level.",
-},
-
+	},
 	features : {
 		"life drain" : {
 			name : "Life Drain",
@@ -82,7 +80,7 @@ RaceList["shadar-kai"] = {
 	languages : ["Common", "+1 from Shadar-kai"],
 	skills : ["Intimidation"],
 	trait : "Shadar-kai (+2 Dexterity, +1 Intelligence)\nDoomspeaker: I gain proficiency in the Intimidation skill. \nOn my turn, when I reduce a creature to 0 hit points, I can use my bonus action to teleport up to 15 feet.",
-},
+	},
 	features : {
 		"shadow jaunt" : {
 			name : "Shadow Jaunt",
