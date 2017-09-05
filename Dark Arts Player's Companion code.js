@@ -20,7 +20,6 @@ RaceList["mummy"] = {
 	dmgres : ["poison"],
 	savetxt : "I am immune to disease and to being poisoned",
 	trait : "Mummy (+2 Strength, +1 Constitution)"\nUndead:\nI am considered undead for effects such as turn undead and many healing spells.\nI am immune to disease and being poisoned.\nI do not need to eat or breathe, but I can can ingest food or drink if I wish.\nInstead of sleeping, I enter an inactive state for 4 hours each day. I do not dream in this state, but resting in this way is otherwise identical to sleeping. Magically induced sleep can cause me to enter this inactive state. \nAs an action, I can target one creature I can see within 10 feet of me. The target must succeed on a Wisdom saving throw or become frightened of me until the end of my next turn. The DC for this saving throw equals 8 + my Constitution modifier + my Proficiency bonus. \nMy hands rot those they touch. When I make unarmed attacks against creatures with them, I deal necrotic damage equal to 1d4 + my Strength modifier, instead of the bludgeoning damage normal for an unarmed attack.", 
-	},
 	features : {
 		"dreadful glare" : { 
 			name : "Dreadful Glare",
