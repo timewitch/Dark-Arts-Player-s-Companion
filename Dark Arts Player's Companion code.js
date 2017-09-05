@@ -20,6 +20,7 @@ RaceList["mummy"] = {
 	dmgres : ["poison"],
 	savetxt : "I am immune to disease and to being poisoned",
 	trait : "Mummy (+2 Strength, +1 Constitution)"\nUndead:\nI am considered undead for effects such as turn undead and many healing spells.\nI am immune to disease and being poisoned.\nI do not need to eat or breathe, but I can can ingest food or drink if I wish.\nInstead of sleeping, I enter an inactive state for 4 hours each day. I do not dream in this state, but resting in this way is otherwise identical to sleeping. Magically induced sleep can cause me to enter this inactive state.", 
+	}
 	features : {
 		"dreadful glare" : { 
 			name : "Dreadful Glare",
